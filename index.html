@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat with Eve</title>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <style>
+    df-messenger {
+      --df-messenger-bot-message: #e0e0e0;
+      --df-messenger-button-titlebar-color: #6200ea;
+      --df-messenger-chat-background-color: #ffffff;
+      --df-messenger-font-color: #000000;
+      --df-messenger-send-icon: #6200ea;
+      --df-messenger-user-message: #dcf8c6;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to Our Chatbot Page!</h1>
+  <p>Click the chat bubble on the bottom right to start chatting with Eve.</p>
+
+  <df-messenger
+    intent="WELCOME"
+    chat-title="eve_new"
+    agent-id="37354501-5c6f-4e76-80e4-202aabebd255"
+    language-code="en"
+  ></df-messenger>
+
+</body>
+</html>
