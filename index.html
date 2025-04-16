@@ -5,28 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chat with Eve</title>
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff5f6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #E84855;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    main {
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    main h1 {
+      color: #E84855;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    main p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
     df-messenger {
-      --df-messenger-bot-message: #e0e0e0;
-      --df-messenger-button-titlebar-color: #6200ea;
+      --df-messenger-bot-message: #f7d9db;
+      --df-messenger-button-titlebar-color: #E84855;
       --df-messenger-chat-background-color: #ffffff;
-      --df-messenger-font-color: #000000;
-      --df-messenger-send-icon: #6200ea;
-      --df-messenger-user-message: #dcf8c6;
+      --df-messenger-font-color: #333333;
+      --df-messenger-send-icon: #E84855;
+      --df-messenger-user-message: #ffe5e7;
       position: fixed;
       bottom: 20px;
       right: 20px;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
 
-  <h1>Welcome to Our Chatbot Page!</h1>
-  <p>Click the chat bubble on the bottom right to start chatting with Eve.</p>
+  <header>
+    <h2>Welcome to Eve</h2>
+  </header>
+
+  <main>
+    <h1>Empowering Women's Health</h1>
+    <p>
+      Eve is a private and supportive chatbot created to provide reliable, validated information
+      about menstruation, contraception, pregnancy, and STDs — tailored for Indonesian women. 
+      Just click the chat bubble to begin your conversation with Eve.
+    </p>
+  </main>
 
   <df-messenger
     intent="WELCOME"
-    chat-title="eve_new"
+    chat-title="EVE"
     agent-id="37354501-5c6f-4e76-80e4-202aabebd255"
     language-code="en"
   ></df-messenger>
